@@ -271,6 +271,90 @@ const About = () => {
         </div>
       </section>
 
+      {/* Publications */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+              Publications
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Contributions académiques et scientifiques de Maître Mohamed Hédi Lakhoua.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Cours */}
+            <div className="fade-in-up">
+              <div className="mb-8">
+                <div className="flex items-center mb-6">
+                  <BookOpen className="w-8 h-8 text-secondary mr-3" />
+                  <h3 className="text-2xl font-bold">Cours Universitaires</h3>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  Disponibles à la Faculté de Droit et des Sciences Politiques de Tunis
+                </p>
+                
+                <div className="space-y-4">
+                  {[
+                    "Cours de droit des voies d'exécution",
+                    "Cours de droit commercial : Les effets de commerce",
+                    "Cours de droit commercial : Les procédures collectives: le concordat préventif/ La faillite",
+                    "Cours de droit commercial: Le redressement des entreprises en difficultés économiques",
+                    "Cours de droit pénal général",
+                    "Cours de procédures pénales"
+                  ].map((course, index) => (
+                    <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-muted/30 transition-colors">
+                      <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
+                      <span className="text-foreground">{course}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Articles */}
+            <div className="fade-in-up">
+              <div className="mb-8">
+                <div className="flex items-center mb-6">
+                  <FileText className="w-8 h-8 text-secondary mr-3" />
+                  <h3 className="text-2xl font-bold">Articles Spécialisés</h3>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  Publications dans les revues juridiques spécialisées
+                </p>
+                
+                <Card className="elegant-card border-0 bg-muted/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start space-x-3">
+                      <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0"></div>
+                      <div>
+                        <h4 className="font-semibold mb-2 text-secondary">
+                          Le recouvrement des créances en Tunisie
+                        </h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          <em>In</em> l'entreprise, l'environnement juridique et fiscal, actes du colloque 
+                          les journées de l'entreprise 2001, l'institut arabe des chefs d'entreprise 
+                          09-10 Novembre.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <div className="mt-6 p-4 bg-secondary/5 rounded-lg border-l-4 border-secondary">
+                  <p className="text-sm text-muted-foreground">
+                    <strong>Note :</strong> Maître Lakhoua est également auteur de plusieurs autres 
+                    articles parus dans les revues spécialisées et membre de l'équipe de rédaction 
+                    de la Revue Tunisienne de Droit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
