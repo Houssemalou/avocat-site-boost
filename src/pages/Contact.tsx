@@ -86,8 +86,8 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6 text-secondary" />,
       title: "Email",
       details: [
-        "Medhedi.lakhoua@planet.tn",
-        "cabinet@lakhoua-avocat.tn"
+        "Medhedi.lakhoua@planet.tn"
+       
       ]
     },
     {
