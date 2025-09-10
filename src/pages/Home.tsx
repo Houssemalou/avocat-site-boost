@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Scale, Users, FileText, Shield, Star, Quote } from 'lucide-react';
+import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/cabinet-exterior.jpg';
@@ -256,6 +256,109 @@ const Home = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Publications Section */}
+      <section className="py-20 bg-gradient-to-br from-muted/30 to-secondary/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+              Publications Académiques
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Contributions scientifiques et pédagogiques de Maître Mohamed Hédi Lakhoua à la formation juridique.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Cours Universitaires */}
+            <div className="fade-in-up">
+              <Card className="elegant-card border-0 h-full bg-background/80 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 rounded-full bg-secondary/10 mr-4">
+                      <BookOpen className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground">Cours Universitaires</h3>
+                      <p className="text-sm text-muted-foreground">Faculté de Droit et des Sciences Politiques de Tunis</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    {[
+                      "Cours de droit des voies d'exécution",
+                      "Cours de droit commercial : Les effets de commerce",
+                      "Cours de droit commercial : Les procédures collectives: le concordat préventif/ La faillite",
+                      "Cours de droit commercial: Le redressement des entreprises en difficultés économiques",
+                      "Cours de droit pénal général",
+                      "Cours de procédures pénales"
+                    ].map((course, index) => (
+                      <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-secondary/5 transition-colors group">
+                        <div className="w-2 h-2 bg-secondary rounded-full mt-3 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
+                        <span className="text-foreground text-sm leading-relaxed">{course}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Articles Spécialisés */}
+            <div className="fade-in-up">
+              <Card className="elegant-card border-0 h-full bg-background/80 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="flex items-center mb-6">
+                    <div className="p-3 rounded-full bg-secondary/10 mr-4">
+                      <Award className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground">Articles Spécialisés</h3>
+                      <p className="text-sm text-muted-foreground">Publications dans les revues juridiques</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-secondary/5 to-primary/5 p-6 rounded-xl border-l-4 border-secondary">
+                    <h4 className="font-semibold mb-3 text-secondary text-lg">
+                      Le recouvrement des créances en Tunisie
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                      <em>In</em> l'entreprise, l'environnement juridique et fiscal, actes du colloque 
+                      les journées de l'entreprise 2001, l'institut arabe des chefs d'entreprise 
+                      09-10 Novembre.
+                    </p>
+                    <div className="flex items-center space-x-2 text-xs text-secondary/70">
+                      <Award className="w-4 h-4" />
+                      <span>Publication référencée</span>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 p-4 bg-muted/30 rounded-lg">
+                    <div className="flex items-start space-x-3">
+                      <FileText className="w-5 h-5 text-secondary mt-1 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground mb-1">
+                          Membre de l'équipe de rédaction
+                        </p>
+                        <p className="text-xs text-muted-foreground">
+                          Revue Tunisienne de Droit - Auteur de plusieurs articles spécialisés
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          <div className="text-center mt-12 fade-in-up">
+            <Link to="/about">
+              <Button className="hero-button">
+                Découvrir Plus Sur Maître Lakhoua
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
