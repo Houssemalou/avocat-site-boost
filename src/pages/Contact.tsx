@@ -70,24 +70,24 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6 text-secondary" />,
       title: "Adresse",
       details: [
-        "123 Avenue des Champs-Élysées",
-        "75008 Paris, France"
+        "1, Rue saint Fulgence",
+        "Mutuelleville, Tunis 1082"
       ]
     },
     {
       icon: <Phone className="w-6 h-6 text-secondary" />,
       title: "Téléphone",
       details: [
-        "+33 1 42 23 45 67",
-        "Urgences: +33 6 12 34 56 78"
+        "71 78 39 39",
+        "Fax: 71 78 30 82"
       ]
     },
     {
       icon: <Mail className="w-6 h-6 text-secondary" />,
       title: "Email",
       details: [
-        "contact@cabinet-juridique.fr",
-        "urgences@cabinet-juridique.fr"
+        "Medhedi.lakhoua@planet.tn",
+        "cabinet@lakhoua-avocat.tn"
       ]
     },
     {
@@ -245,12 +245,12 @@ const Contact = () => {
                     Urgences 24h/24
                   </h3>
                   <p className="text-muted-foreground mb-4">
-                    Pour les situations juridiques urgentes, nous sommes disponibles 
-                    24h/24 et 7j/7.
+                    Pour les situations juridiques urgentes, contactez-nous 
+                    durant nos heures d'ouverture.
                   </p>
                   <div className="flex items-center space-x-2 text-secondary font-medium">
                     <Phone className="w-4 h-4" />
-                    <span>+33 6 12 34 56 78</span>
+                    <span>71 78 39 39</span>
                   </div>
                 </CardContent>
               </Card>
@@ -263,12 +263,12 @@ const Contact = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
-              Notre Localisation
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Situé au cœur de Paris, notre cabinet est facilement accessible.
-            </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+                Notre Localisation
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Situé à Mutuelleville, Tunis, notre cabinet est facilement accessible.
+              </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -279,11 +279,11 @@ const Contact = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <MapPin className="w-16 h-16 text-secondary mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">123 Avenue des Champs-Élysées</h3>
-                      <p className="text-muted-foreground">75008 Paris, France</p>
+                      <h3 className="text-xl font-semibold mb-2">1, Rue saint Fulgence</h3>
+                      <p className="text-muted-foreground">Mutuelleville, Tunis 1082</p>
                       <div className="mt-4">
                         <Button 
-                          onClick={() => window.open('https://maps.google.com/?q=123+Avenue+des+Champs-Élysées,+75008+Paris', '_blank')}
+                          onClick={() => window.open('https://maps.google.com/?q=1+Rue+saint+Fulgence+Mutuelleville+Tunis+1082', '_blank')}
                           className="outline-button"
                         >
                           Voir sur Google Maps
@@ -304,19 +304,19 @@ const Contact = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-muted-foreground">
-                      <strong>En métro :</strong> Ligne 1, 9, 13 - Station Champs-Élysées - Clemenceau
+                      <strong>En transport :</strong> Accessible par les transports en commun de Tunis
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-muted-foreground">
-                      <strong>En bus :</strong> Lignes 28, 42, 73, 80, 83
+                      <strong>En taxi :</strong> Facilement accessible depuis le centre-ville
                     </p>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
                     <p className="text-muted-foreground">
-                      <strong>En voiture :</strong> Parking public Champs-Élysées à 2 minutes à pied
+                      <strong>En voiture :</strong> Parking disponible à proximité
                     </p>
                   </div>
                 </div>

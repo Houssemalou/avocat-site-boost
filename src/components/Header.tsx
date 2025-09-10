@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Scale } from 'lucide-react';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo-lakhoua.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,8 +26,8 @@ const Header = () => {
               <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold hero-text">Cabinet Juridique</span>
-              <span className="text-sm text-muted-foreground">Excellence & Expertise</span>
+              <span className="text-xl font-bold hero-text">Cabinet Lakhoua</span>
+              <span className="text-sm text-muted-foreground">مكتب لخوة للمحاماة</span>
             </div>
           </Link>
 

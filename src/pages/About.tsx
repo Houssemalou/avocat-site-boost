@@ -3,8 +3,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { GraduationCap, Award, Scale, Users, BookOpen, Briefcase } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import lawyerPortrait from '@/assets/lawyer-portrait.jpg';
-import officeBuilding from '@/assets/office-building.jpg';
+import lawyerPortrait from '@/assets/lawyer-lakhoua.jpg';
+import officeBuilding from '@/assets/office-interior.jpg';
 
 const About = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -85,11 +85,11 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 hero-text">
-              À Propos du Cabinet
+              Cabinet Lakhoua - مكتب لخوة للمحاماة
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Fondé sur les valeurs d'excellence, d'intégrité et de proximité client, 
-              notre cabinet vous accompagne depuis plus de 20 ans dans tous vos enjeux juridiques.
+              Cabinet d'avocat tunisien fondé sur les valeurs d'excellence juridique, 
+              d'intégrité professionnelle et de proximité client depuis plus de 20 ans.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ const About = () => {
               <div className="relative">
                 <img 
                   src={lawyerPortrait} 
-                  alt="Maître Jean Dupont - Avocat" 
+                  alt="Maître Lakhoua Mohamed Hédi - Avocat" 
                   className="w-full h-96 object-cover rounded-2xl shadow-[var(--elegant-shadow)]"
                 />
                 <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-secondary rounded-full flex items-center justify-center">
@@ -114,18 +114,22 @@ const About = () => {
             
             <div className="fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 hero-text">
-                Maître Jean Dupont
+                Maître Lakhoua Mohamed Hédi
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Avocat au Barreau de Paris depuis 2003, je me suis spécialisé dans le conseil 
-                juridique aux entreprises et aux particuliers. Ma philosophie : allier rigueur 
-                juridique et compréhension humaine pour offrir un service d'excellence.
+                Avocat à la Cour de Cassation, Docteur en Droit, je dirige le Cabinet Lakhoua 
+                depuis plus de 20 ans. Ma philosophie : allier expertise juridique tunisienne 
+                et approche humaine pour défendre efficacement vos droits et intérêts.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Membre du Barreau de Paris</span>
+                  <span className="text-foreground">Avocat à la Cour de Cassation</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                  <span className="text-foreground">Docteur en Droit</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
@@ -133,11 +137,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Formateur en Droit Commercial</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Membre de l'Association des Avocats d'Affaires</span>
+                  <span className="text-foreground">Expert en Droit Civil et Pénal</span>
                 </div>
               </div>
 

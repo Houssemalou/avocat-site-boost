@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Scale, Users, FileText, Shield, Star, Quote } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import heroImage from '@/assets/hero-law-office.jpg';
+import heroImage from '@/assets/cabinet-exterior.jpg';
 
 const Home = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -88,11 +88,11 @@ const Home = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Votre <span className="gold-text">Avocat</span> de Confiance
+              Maître <span className="gold-text">Lakhoua</span> Mohamed Hédi
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Excellence juridique, expertise reconnue et accompagnement personnalisé 
-              pour défendre vos droits et vos intérêts.
+              Avocat à la Cour de Cassation - Docteur en Droit<br/>
+              Cabinet Lakhoua, votre partenaire juridique de confiance depuis plus de 20 ans.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
