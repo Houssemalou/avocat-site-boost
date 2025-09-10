@@ -32,17 +32,21 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 mt-1 text-secondary flex-shrink-0" />
                 <span className="text-sm text-primary-foreground/80">
-                  123 Avenue des Champs-Élysées<br />
-                  75008 Paris, France
+                  Rue saint Fulgence, Mutuelleville, Tunis 1082<br />
+  
                 </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary" />
-                <span className="text-sm text-primary-foreground/80">+33 1 42 23 45 67</span>
+                <span className="text-sm text-primary-foreground/80">71 78 39 39</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-secondary" />
+                <span className="text-sm text-primary-foreground/80">71 78 30 82</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary" />
-                <span className="text-sm text-primary-foreground/80">contact@cabinet-juridique.fr</span>
+                <span className="text-sm text-primary-foreground/80">Medhedi.lakhoua@planet.tn</span>
               </div>
             </div>
           </div>
