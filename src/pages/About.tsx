@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Award, Scale, Users, BookOpen, Briefcase } from 'lucide-react';
+import { GraduationCap, Award, Scale, Users, BookOpen, Briefcase, Building, FileText } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import lawyerPortrait from '@/assets/lawyer-lakhoua.jpg';
@@ -31,20 +31,26 @@ const About = () => {
     {
       icon: <Scale className="w-8 h-8 text-secondary" />,
       title: "Droit des Affaires",
-      description: "Spécialisation en droit commercial, contrats d'entreprise, fusions-acquisitions et gouvernance.",
-      experience: "15 ans d'expérience"
+      description: "Fusion acquisition, droit bancaire et financier, droit des assurances, recouvrement des créances, droit pénal des affaires.",
+      experience: "Spécialité principale"
     },
     {
-      icon: <Users className="w-8 h-8 text-secondary" />,
-      title: "Droit Civil",
-      description: "Expert en droit de la famille, successions, immobilier et responsabilité civile.",
-      experience: "12 ans d'expérience"
+      icon: <FileText className="w-8 h-8 text-secondary" />,
+      title: "Droit Fiscal",
+      description: "Fiscalité directe et indirecte, assistance contrôle fiscal, contentieux devant les tribunaux tunisiens.",
+      experience: "Expertise approfondie"
+    },
+    {
+      icon: <Building className="w-8 h-8 text-secondary" />,
+      title: "Droit Immobilier",
+      description: "Construction, ventes immobilières, propriété intellectuelle, droit d'auteur, nouvelles technologies.",
+      experience: "Compétence étendue"
     },
     {
       icon: <Briefcase className="w-8 h-8 text-secondary" />,
-      title: "Droit du Travail",
-      description: "Accompagnement des entreprises et salariés dans leurs relations de travail.",
-      experience: "10 ans d'expérience"
+      title: "Arbitrage & Notariat",
+      description: "Arbitrages internes et internationaux, constitution sociétés, vie de l'entreprise, baux commerciaux.",
+      experience: "Excellence reconnue"
     }
   ];
 
@@ -70,10 +76,10 @@ const About = () => {
   ];
 
   const achievements = [
-    { number: "500+", label: "Clients Satisfaits" },
-    { number: "20+", label: "Années d'Expérience" },
-    { number: "95%", label: "Taux de Réussite" },
-    { number: "24/7", label: "Disponibilité Urgences" }
+    { number: "1000+", label: "Clients Satisfaits" },
+    { number: "50+", label: "Années d'Expérience" },
+    { number: "10+", label: "Collaborateurs" },
+    { number: "6", label: "Domaines d'Expertise" }
   ];
 
   return (
@@ -88,8 +94,9 @@ const About = () => {
               Cabinet Lakhoua - مكتب لخوة للمحاماة
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Cabinet d'avocat tunisien fondé sur les valeurs d'excellence juridique, 
-              d'intégrité professionnelle et de proximité client depuis plus de 20 ans.
+              Fondé en 1973 par Maître Mohamed Hédi Lakhoua, composé d'une dizaine de personnes, 
+              le Cabinet a développé un partenariat étroit avec des entreprises nationales et internationales de premier ordre. 
+              Fier d'une notoriété juridique pluridisciplinaire qui dure depuis plus de 50 ans.
             </p>
           </div>
         </div>
@@ -117,34 +124,39 @@ const About = () => {
                 Maître Lakhoua Mohamed Hédi
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Avocat à la Cour de Cassation, Docteur en Droit, je dirige le Cabinet Lakhoua 
-                depuis plus de 20 ans. Ma philosophie : allier expertise juridique tunisienne 
-                et approche humaine pour défendre efficacement vos droits et intérêts.
+                Avocat auprès de la Cour de Cassation avec 45 ans d'expérience, Docteur en Droit, 
+                Professeur Emérite à la faculté de droit et des sciences politiques de Tunis. 
+                Spécialiste en droit des affaires, directeur de mémoires et auteur de plusieurs articles spécialisés.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Avocat à la Cour de Cassation</span>
+                  <span className="text-foreground">Avocat auprès de la Cour de Cassation (45 ans d'expérience)</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Docteur en Droit</span>
+                  <span className="text-foreground">Docteur en Droit, Professeur Emérite</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Spécialiste en Droit des Affaires</span>
+                  <span className="text-foreground">Membre équipe de rédaction Revue Tunisienne de Droit</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-foreground">Expert en Droit Civil et Pénal</span>
+                  <span className="text-foreground">Ancien président jury concours au Ministère enseignement supérieur</span>
                 </div>
               </div>
 
-              <blockquote className="border-l-4 border-secondary pl-6 italic text-lg text-muted-foreground">
-                "Le droit n'est pas seulement une science, c'est un art qui se nourrit de l'expérience 
-                et de la compréhension des enjeux humains et économiques."
-              </blockquote>
+              <div className="bg-muted/30 p-6 rounded-lg">
+                <h4 className="font-semibold mb-3 text-secondary">La devise du cabinet :</h4>
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <span>• Confiance</span>
+                  <span>• Confidentialité</span>
+                  <span>• Sérieux</span>
+                  <span>• Rigueur et célérité</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

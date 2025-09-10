@@ -32,40 +32,40 @@ const Home = () => {
     {
       icon: <Scale className="w-8 h-8 text-secondary" />,
       title: "Droit des Affaires",
-      description: "Conseil et accompagnement juridique pour entreprises, contrats commerciaux, fusions-acquisitions."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-secondary" />,
-      title: "Droit Civil",
-      description: "Droit de la famille, succession, immobilier, responsabilité civile et contentieux."
+      description: "Fusion acquisition, droit bancaire et financier, droit des assurances, recouvrement des créances, droit pénal des affaires."
     },
     {
       icon: <FileText className="w-8 h-8 text-secondary" />,
-      title: "Conseil Juridique",
-      description: "Consultation personnalisée, rédaction d'actes, audit juridique et prévention des risques."
+      title: "Droit Fiscal",
+      description: "Fiscalité directe et indirecte, assistance contrôle fiscal, contentieux devant les tribunaux tunisiens."
+    },
+    {
+      icon: <Users className="w-8 h-8 text-secondary" />,
+      title: "Droit Immobilier",
+      description: "Construction, ventes immobilières, propriété intellectuelle, droit d'auteur, nouvelles technologies."
     },
     {
       icon: <Shield className="w-8 h-8 text-secondary" />,
-      title: "Défense Pénale",
-      description: "Représentation devant les tribunaux pénaux, assistance lors des gardes à vue."
+      title: "Arbitrage & Notariat",
+      description: "Arbitrages internes et internationaux, constitution sociétés, vie de l'entreprise, baux commerciaux."
     }
   ];
 
   const testimonials = [
     {
-      name: "Marie Dubois",
-      role: "Dirigeante d'entreprise",
-      content: "Un accompagnement exceptionnel dans la restructuration de mon entreprise. Professionnalisme et efficacité."
+      name: "Société CIC Banque",
+      role: "Institution financière",
+      content: "Un partenariat de confiance avec le Cabinet Lakhoua pour nos opérations juridiques complexes."
     },
     {
-      name: "Pierre Martin",
-      role: "Particulier",
-      content: "Excellent conseil en droit immobilier. Une expertise reconnue et une approche humaine remarquable."
+      name: "Groupe MAZARS",
+      role: "Cabinet d'audit",
+      content: "Excellence juridique et approche professionnelle remarquable dans nos dossiers internationaux."
     },
     {
-      name: "Sophie Laurent",
-      role: "Entrepreneur",
-      content: "Grâce à leur expertise en droit des affaires, j'ai pu sécuriser mes investissements en toute confiance."
+      name: "TRANSAVIA International",
+      role: "Entreprise internationale",
+      content: "Accompagnement juridique de premier plan pour nos activités en Tunisie et à l'international."
     }
   ];
 
@@ -91,8 +91,8 @@ const Home = () => {
               Maître <span className="gold-text">Lakhoua</span> Mohamed Hédi
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Avocat à la Cour de Cassation - Docteur en Droit<br/>
-              Cabinet Lakhoua, votre partenaire juridique de confiance depuis plus de 20 ans.
+              Avocat auprès de la Cour de Cassation - Docteur en Droit<br/>
+              Fondé en 1973, plus de 50 ans d'excellence juridique au service de vos droits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
@@ -169,9 +169,9 @@ const Home = () => {
                     <Star className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">20+ Ans d'Expérience</h3>
+                    <h3 className="text-xl font-semibold mb-2">50+ Ans d'Expérience</h3>
                     <p className="text-muted-foreground">
-                      Une expertise reconnue et une connaissance approfondie du droit français.
+                      Une expertise reconnue et une connaissance approfondie du droit tunisien depuis 1973.
                     </p>
                   </div>
                 </div>
