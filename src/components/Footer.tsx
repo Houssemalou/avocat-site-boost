@@ -1,0 +1,98 @@
+import { Link } from 'react-router-dom';
+import { MapPin, Phone, Mail, Clock, Scale } from 'lucide-react';
+import logo from '@/assets/logo.png';
+
+const Footer = () => {
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Logo & Description */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-8 h-8">
+                <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain brightness-0 invert" />
+              </div>
+              <span className="text-xl font-bold">Cabinet Juridique</span>
+            </div>
+            <p className="text-primary-foreground/80 mb-4 max-w-md">
+              Votre cabinet d'avocat de confiance, spécialisé dans le droit des affaires, 
+              le droit civil et le conseil juridique. Plus de 20 ans d'expérience à votre service.
+            </p>
+            <div className="flex items-center space-x-2 text-secondary">
+              <Scale className="w-5 h-5" />
+              <span className="font-semibold">Justice • Expertise • Confiance</span>
+            </div>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-secondary">Contact</h3>
+            <div className="space-y-3">
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 mt-1 text-secondary flex-shrink-0" />
+                <span className="text-sm text-primary-foreground/80">
+                  123 Avenue des Champs-Élysées<br />
+                  75008 Paris, France
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-secondary" />
+                <span className="text-sm text-primary-foreground/80">+33 1 42 23 45 67</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-secondary" />
+                <span className="text-sm text-primary-foreground/80">contact@cabinet-juridique.fr</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Horaires */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-secondary">Horaires</h3>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                <Clock className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-primary-foreground/80">Lun - Ven: 9h - 18h</span>
+              </div>
+              <div className="text-sm text-primary-foreground/80 ml-6">
+                Samedi: 9h - 12h
+              </div>
+              <div className="text-sm text-primary-foreground/80 ml-6">
+                Dimanche: Fermé
+              </div>
+              <div className="mt-3 p-2 bg-primary-light/20 rounded text-xs text-primary-foreground/90">
+                Urgences: 24h/24 - 7j/7
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-primary-foreground/60">
+              © 2024 Cabinet Juridique. Tous droits réservés.
+            </div>
+            <div className="flex space-x-6">
+              <Link 
+                to="/contact" 
+                className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors"
+              >
+                Mentions légales
+              </Link>
+              <Link 
+                to="/contact" 
+                className="text-sm text-primary-foreground/80 hover:text-secondary transition-colors"
+              >
+                Politique de confidentialité
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
