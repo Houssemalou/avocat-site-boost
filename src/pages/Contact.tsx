@@ -8,6 +8,7 @@ import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Map from '@/components/Map';
 
 const Contact = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -108,9 +109,19 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Form & Info avec Map en arrière-plan */}
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Map Background */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <Map 
+            isBackground={true}
+            height="h-full"
+            center={[10.1815, 36.8065]}
+            zoom={11}
+          />
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             
             {/* Contact Form */}
@@ -274,24 +285,11 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
               <Card className="elegant-card border-0 overflow-hidden">
-                <div className="h-96 bg-gradient-to-br from-primary/10 to-secondary/10 relative">
-                  {/* Placeholder for interactive map */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-16 h-16 text-secondary mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">1, Rue saint Fulgence</h3>
-                      <p className="text-muted-foreground">Mutuelleville, Tunis 1082</p>
-                      <div className="mt-4">
-                        <Button 
-                          onClick={() => window.open('https://maps.google.com/?q=1+Rue+saint+Fulgence+Mutuelleville+Tunis+1082', '_blank')}
-                          className="outline-button"
-                        >
-                          Voir sur Google Maps
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Map 
+                  height="h-96"
+                  center={[10.1815, 36.8065]}
+                  zoom={15}
+                />
               </Card>
             </div>
 
