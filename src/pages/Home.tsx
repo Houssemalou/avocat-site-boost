@@ -1,14 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, Target, Handshake } from 'lucide-react';
+import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, Target, Handshake, ChevronDown } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/cabinet-exterior.jpg';
 
 const Home = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [expandedServices, setExpandedServices] = useState<number[]>([]);
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -27,6 +28,14 @@ const Home = () => {
 
     return () => observerRef.current?.disconnect();
   }, []);
+
+  const toggleServiceExpansion = (index: number) => {
+    setExpandedServices(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
 
   const services = [
     {
@@ -208,35 +217,53 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card 
-                key={index} 
-                className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-6">
-                  <div className="mb-4 flex justify-center">
-                    <div className="p-3 rounded-full bg-secondary/10 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold mb-3 text-foreground text-center">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4 text-center leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="space-y-2">
-                    {service.details.map((detail, detailIndex) => (
-                      <div key={detailIndex} className="flex items-start space-x-2 text-xs">
-                        <div className="w-1.5 h-1.5 bg-secondary rounded-full mt-1.5 flex-shrink-0"></div>
-                        <span className="text-muted-foreground leading-tight">{detail}</span>
+            {services.map((service, index) => {
+              const isExpanded = expandedServices.includes(index);
+              return (
+                <Card 
+                  key={index} 
+                  className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CardContent className="p-6">
+                    <div className="mb-4 flex justify-center">
+                      <div className="p-3 rounded-full bg-secondary/10 group-hover:scale-110 transition-transform duration-300">
+                        {service.icon}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                    </div>
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-lg font-bold text-foreground text-center flex-1">
+                        {service.title}
+                      </h3>
+                      <button
+                        onClick={() => toggleServiceExpansion(index)}
+                        className="p-2 hover:bg-secondary/10 rounded-full transition-colors duration-200 ml-2"
+                        aria-label={isExpanded ? "Masquer les détails" : "Voir les détails"}
+                      >
+                        <ChevronDown 
+                          className={`w-5 h-5 text-secondary transition-transform duration-300 ${
+                            isExpanded ? 'rotate-180' : ''
+                          }`} 
+                        />
+                      </button>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4 text-center leading-relaxed">
+                      {service.description}
+                    </p>
+                    <div className={`space-y-2 transition-all duration-300 overflow-hidden ${
+                      isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      {service.details.map((detail, detailIndex) => (
+                        <div key={detailIndex} className="flex items-start space-x-2 text-xs">
+                          <div className="w-1.5 h-1.5 bg-secondary rounded-full mt-1.5 flex-shrink-0"></div>
+                          <span className="text-muted-foreground leading-tight">{detail}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
