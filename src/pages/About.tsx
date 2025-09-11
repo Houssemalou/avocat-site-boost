@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { GraduationCap, Award, Scale, Users, BookOpen, Briefcase, Building, FileText } from 'lucide-react';
+import { GraduationCap, Award, Scale, Users, BookOpen, Briefcase, Building, FileText, UserCheck } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import lawyerPortrait from '@/assets/lawyer-lakhoua.jpg';
@@ -351,6 +351,101 @@ const About = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Collaborateurs */}
+      <section className="py-20 bg-muted/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+              Nos Collaborateurs
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Une équipe d'avocats expérimentés et spécialisés pour vous accompagner dans tous vos projets juridiques.
+            </p>
+            <div className="mt-4 p-3 bg-secondary/10 rounded-lg inline-block">
+              <p className="text-sm text-secondary font-medium">
+                Cette liste n'est communiquée qu'à titre indicatif, elle est amenée à évoluer en fonction des recrutements
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Maître Abdelwahed LANDOLSI",
+                title: "Avocat à la cour",
+                qualifications: [
+                  "Maîtrise en droit privé en 1996 (Faculté de droit de Tunis)",
+                  "Certificat d'aptitude à la profession d'avocat en 1997", 
+                  "Diplôme d'études approfondies en droit privé en 1998 (Faculté de droit de Tunis)",
+                  "Assistant à la faculté de droit de Tunis depuis 2000"
+                ]
+              },
+              {
+                name: "Maître Ali BORNAZ",
+                title: "Avocat à la cour",
+                qualifications: [
+                  "Maîtrise en droit privé en 2005 (Faculté de droit de Caen)",
+                  "Diplôme d'études approfondies en droit des affaires en 2006 (Faculté de droit de Caen)"
+                ]
+              },
+              {
+                name: "Maître Zeineb Labidi",
+                title: "Avocate à la cour", 
+                qualifications: [
+                  "Licence en droit privé en 2016 (Faculté de droit de Tunis)",
+                  "Master en droit fiscal en 2018 (Faculté de droit de Tunis)"
+                ]
+              },
+              {
+                name: "Maître Insaf Ayari",
+                title: "Avocate à la cour",
+                qualifications: [
+                  "Licence en droit privé en 2016 (Faculté de droit de Tunis)",
+                  "Master en 2005 (Faculté de droit de Tunis)"
+                ]
+              }
+            ].map((collaborator, index) => (
+              <Card 
+                key={index} 
+                className="elegant-card hover-lift fade-in-up border-0 bg-background"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <CardContent className="p-8">
+                  <div className="mb-6 flex items-center">
+                    <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mr-4">
+                      <UserCheck className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold mb-1 text-foreground">
+                        {collaborator.name}
+                      </h3>
+                      <p className="text-secondary font-medium">
+                        {collaborator.title}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-foreground mb-3 flex items-center">
+                      <GraduationCap className="w-4 h-4 text-secondary mr-2" />
+                      Qualifications
+                    </h4>
+                    {collaborator.qualifications.map((qualification, qualIndex) => (
+                      <div key={qualIndex} className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {qualification}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
