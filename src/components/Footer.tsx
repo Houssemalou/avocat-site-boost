@@ -16,7 +16,7 @@ const Footer = () => {
             partenaires et/ou employés de ses événements et des actualités du marché, et fournit un espace 
             pour vos analyses sur les tendances, la jurisprudence...
           </p>
-          <form 
+         <form 
             action="https://formsubmit.co/medhedi.lakhoua@planet.tn" 
             method="POST"
             className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
@@ -25,6 +25,14 @@ const Footer = () => {
             <input type="hidden" name="_language" value="fr" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
+          
+            {/* Message statique */}
+            <input 
+              type="hidden" 
+              name="message" 
+              value="Cet utilisateur s’est abonné à la newsletter." 
+            />
+          
             <Input
               type="email"
               name="email"
@@ -32,6 +40,7 @@ const Footer = () => {
               required
               className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-secondary"
             />
+          
             <Button 
               type="submit"
               variant="secondary"
@@ -41,6 +50,7 @@ const Footer = () => {
               <span>S'abonner</span>
             </Button>
           </form>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
