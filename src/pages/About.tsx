@@ -172,7 +172,7 @@ const About = () => {
               <UserCheck className="w-10 h-10 text-white" />
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 hero-text bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 hero-text bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
               Consultation Gratuite
             </h2>
             
@@ -229,7 +229,7 @@ const About = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 hero-text">
               Domaines d'Expertise
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -273,7 +273,7 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 hero-text">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 hero-text">
                 L'Entreprise Lakhoua
               </h2>
               <div className="space-y-6">
@@ -322,7 +322,7 @@ const About = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10">
               Nos Réalisations
             </h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -353,7 +353,7 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-10 hero-text">
               Publications
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
