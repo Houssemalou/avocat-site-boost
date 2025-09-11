@@ -205,27 +205,42 @@ const About = () => {
         </div>
       </section>
 
-      {/* Qualifications */}
+      {/* Histoire du Cabinet */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold mb-8 hero-text">
-                Formation & Qualifications
+                L'Entreprise Lakhoua
               </h2>
               <div className="space-y-6">
-                {qualifications.map((qualification, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 rounded-lg hover:bg-muted/30 transition-colors">
-                    <div className="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
-                      {qualification.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold mb-1">{qualification.title}</h3>
-                      <p className="text-muted-foreground mb-1">{qualification.subtitle}</p>
-                      <span className="text-sm text-secondary font-medium">{qualification.year}</span>
-                    </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Fondé en 1973 par Maître Mohamed Hédi Lakhoua, le cabinet d'avocats a toujours pratiqué 
+                  une activité judiciaire en tant que plaideur en plus de fournir des services de conseil.
+                </p>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Grâce à une équipe qualifiée composée de dix personnes : Avocats, Avocats stagiaires, 
+                  Consultants et Assistants... Le Cabinet Lakhoua a développé un partenariat étroit avec 
+                  des entreprises nationales et internationales de premier plan.
+                </p>
+                
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Fier d'une réputation juridique pluridisciplinaire de près de cinquante ans, 
+                  le Cabinet Lakhoua s'engage à répondre aux exigences du monde des affaires 
+                  dans le plus grand respect de sa méthodologie et de ses principes.
+                </p>
+
+                <div className="bg-secondary/10 p-6 rounded-lg border-l-4 border-secondary">
+                  <div className="flex items-center mb-4">
+                    <Building className="w-6 h-6 text-secondary mr-3" />
+                    <h4 className="font-semibold text-secondary">Notre Engagement</h4>
                   </div>
-                ))}
+                  <p className="text-sm text-muted-foreground">
+                    Une approche personnalisée et professionnelle pour chaque client, 
+                    alliant tradition juridique et innovation moderne.
+                  </p>
+                </div>
               </div>
             </div>
             

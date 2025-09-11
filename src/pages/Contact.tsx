@@ -47,21 +47,10 @@ const Contact = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Simulate form submission
+    // FormSubmit will handle the form submission
     toast({
-      title: "Message envoyé avec succès !",
-      description: "Nous vous recontacterons dans les plus brefs délais.",
-    });
-
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+      title: "Formulaire soumis !",
+      description: "Votre message a été envoyé avec succès.",
     });
   };
 
@@ -134,7 +123,18 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    action="https://formsubmit.co/medhedi.lakhoua@planet.tn" 
+                    method="POST"
+                    onSubmit={handleSubmit} 
+                    className="space-y-6"
+                  >
+                    <input type="hidden" name="_subject" value="Nouveau message de contact - Cabinet Lakhoua" />
+                    <input type="hidden" name="_language" value="fr" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value={window.location.origin + "/contact?success=true"} />
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Nom complet *</Label>
@@ -172,7 +172,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="border-border/50 focus:border-secondary"
-                          placeholder="+33 1 23 45 67 89"
+                          placeholder="+216 XX XX XX XX"
                         />
                       </div>
                       <div className="space-y-2">
