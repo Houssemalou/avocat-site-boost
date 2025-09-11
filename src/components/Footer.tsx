@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Scale, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Scale, Send, Instagram, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import logo from '@/assets/logo.png';
@@ -115,6 +115,31 @@ const Footer = () => {
               <div className="mt-3 p-2 bg-primary-light/20 rounded text-xs text-primary-foreground/90">
                 Urgences: 24h/24 - 7j/7
               </div>
+            </div>
+          </div>
+
+          {/* Réseaux Sociaux */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-secondary">Suivez-nous</h3>
+            <div className="space-y-3">
+              <a 
+                href="https://www.instagram.com/abbeslakhoua/?igsh=MWYzdzJydTRic21jZw%3D%3D#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-primary-foreground/80 hover:text-secondary transition-colors"
+              >
+                <Instagram className="w-5 h-5 text-secondary" />
+                <span className="text-sm">Instagram</span>
+              </a>
+              <a 
+                href="https://www.facebook.com/lakhoua.abbes?mibextid=LQQJ4d&rdid=DowHejVj4WYG7PLF&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16yyHBDSSD%2F%3Fmibextid%3DLQQJ4d#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-primary-foreground/80 hover:text-secondary transition-colors"
+              >
+                <Facebook className="w-5 h-5 text-secondary" />
+                <span className="text-sm">Facebook</span>
+              </a>
             </div>
           </div>
         </div>
