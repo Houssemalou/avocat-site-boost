@@ -58,7 +58,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-8 h-8">
-                <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain brightness-0 invert" />
+                <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain brightness-0 invert drop-shadow-sm" />
               </div>
               <span className="text-xl font-bold">Cabinet Juridique</span>
             </div>

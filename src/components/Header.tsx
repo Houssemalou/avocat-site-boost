@@ -23,7 +23,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover-lift">
             <div className="w-10 h-10 relative">
-              <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain" />
+              <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold hero-text">Cabinet Lakhoua</span>
