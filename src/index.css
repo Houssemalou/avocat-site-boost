@@ -135,6 +135,19 @@
   
   .hero-text {
     @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+    filter: drop-shadow(0 2px 4px hsl(var(--primary) / 0.1));
+    position: relative;
+  }
+  
+  .hero-text::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 1;
   }
   
   .gold-text {

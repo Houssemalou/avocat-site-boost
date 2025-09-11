@@ -229,9 +229,10 @@ const About = () => {
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 hero-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text relative z-10">
               Domaines d'Expertise
             </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Une maîtrise approfondie du droit dans ses différentes branches pour vous conseiller efficacement.
             </p>
@@ -273,9 +274,10 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
-              <h2 className="text-3xl md:text-4xl font-bold mb-12 hero-text">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text relative z-10">
                 L'Entreprise Lakhoua
               </h2>
+              <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mb-8 rounded-full"></div>
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Fondé en 1973 par Maître Mohamed Hédi Lakhoua, le cabinet d'avocats a toujours pratiqué 
@@ -322,9 +324,10 @@ const About = () => {
       <section className="py-20 bg-gradient-to-r from-primary to-primary-light text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white relative z-10">
               Nos Réalisations
             </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-secondary to-accent mx-auto mb-6 rounded-full"></div>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Des chiffres qui témoignent de notre engagement et de notre expertise.
             </p>
@@ -353,9 +356,10 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-10 hero-text">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text relative z-10">
               Publications
             </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Contributions académiques et scientifiques de Maître Mohamed Hédi Lakhoua.
             </p>
