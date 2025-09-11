@@ -31,23 +31,101 @@ const Home = () => {
   const services = [
     {
       icon: <Scale className="w-8 h-8 text-secondary" />,
-      title: "Droit des Affaires",
-      description: "Fusion acquisition, droit bancaire et financier, droit des assurances, recouvrement des créances, droit pénal des affaires."
+      title: "DROIT DES AFFAIRES",
+      description: "Le cabinet gère les litiges des entreprises, institutions et particuliers dans les domaines suivants:",
+      details: [
+        "Droit des contrats",
+        "Recouvrement des créances et voies d'exécution",
+        "Droit bancaire et financier",
+        "Droit du cautionnement",
+        "Droit de la concurrence, distribution et consommation",
+        "Fusion acquisition (joint venture), scission, absorption",
+        "Droit des entreprises en difficultés",
+        "Propriété intellectuelle (Brevets, marques, dessins, modèles, droit d'auteur)",
+        "Responsabilité civile industrielle",
+        "Droit de l'informatique et des nouvelles technologies",
+        "Droit pénal des affaires"
+      ]
     },
     {
       icon: <FileText className="w-8 h-8 text-secondary" />,
-      title: "Droit Fiscal",
-      description: "Fiscalité directe et indirecte, assistance contrôle fiscal, contentieux devant les tribunaux tunisiens."
+      title: "DROIT IMMOBILIER",
+      description: "Le cabinet assiste les professionnels et les particuliers lors de négociation, procédures et expertises en:",
+      details: [
+        "Droit de la construction (responsabilité civile, contractuelle, garanties légale)",
+        "Ventes immobilières",
+        "Copropriété",
+        "Saisies immobilières"
+      ]
     },
     {
       icon: <Users className="w-8 h-8 text-secondary" />,
-      title: "Droit Immobilier",
-      description: "Construction, ventes immobilières, propriété intellectuelle, droit d'auteur, nouvelles technologies."
+      title: "DROIT SOCIAL",
+      description: "Le cabinet gère les litiges nés à l'occasion du contrat de travail:",
+      details: [
+        "Contentieux prud'homal",
+        "Sécurité sociale",
+        "Rédaction des contrats de travail",
+        "Droit pénal du travail (accidents de travail)",
+        "Audit social"
+      ]
     },
     {
       icon: <Shield className="w-8 h-8 text-secondary" />,
-      title: "Arbitrage & Notariat",
-      description: "Arbitrages internes et internationaux, constitution sociétés, vie de l'entreprise, baux commerciaux."
+      title: "DROIT CIVIL ET DE LA FAMILLE",
+      description: "Le cabinet pratique conseils et contentieux dans les domaines suivants:",
+      details: [
+        "Droit des obligations (responsabilité contractuelle, délictuelle)",
+        "Indivision",
+        "Succession",
+        "Filiation",
+        "Nom, prénom",
+        "Droit des mineurs"
+      ]
+    },
+    {
+      icon: <Scale className="w-8 h-8 text-secondary" />,
+      title: "DROIT DES ASSURANCES",
+      description: "Le cabinet gère le contentieux de la responsabilité dans les domaines suivants:",
+      details: [
+        "Accidents de la circulation",
+        "Indemnisation des préjudices corporels",
+        "Indemnisation des victimes d'infraction",
+        "Incendie"
+      ]
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-secondary" />,
+      title: "DROIT FISCAL",
+      description: "Le cabinet intervient dans le cadre des missions suivantes:",
+      details: [
+        "Consultations dans les domaines de fiscalité directe et indirecte des personnes physiques et morales",
+        "Assistance en cas de contrôle fiscal",
+        "Contentieux devant les différents tribunaux Tunisiens",
+        "Responsabilité des sociétés étrangères ou d'expatriés auprès de l'administration fiscale Tunisienne"
+      ]
+    },
+    {
+      icon: <Award className="w-8 h-8 text-secondary" />,
+      title: "ARBITRAGE",
+      description: "Le cabinet représente et conseille ses clients dans les:",
+      details: [
+        "Arbitrages internes",
+        "Arbitrages internationaux"
+      ]
+    },
+    {
+      icon: <BookOpen className="w-8 h-8 text-secondary" />,
+      title: "NOTARIAT",
+      description: "Un échantillon de la compétence du cabinet dans le domaine notarial:",
+      details: [
+        "Entreprise: Vie de l'entreprise (constitution des sociétés, statuts), modification ou cession des parts sociales, acquisition de biens, crédit-bail immobilier",
+        "Fond de commerce: achat et vente, rédaction de baux commerciaux, transmission de l'entreprise",
+        "Immobilier: Rédaction de baux, achats et ventes, négociation, fiscalité immobilière",
+        "Famille - Décès: Succession, partage, règlements successoraux",
+        "Famille - Vie de famille: Adoption, donation, modification du contrat de mariage, testament",
+        "Famille - Séparation: Divorce, liquidation de biens après divorce"
+      ]
     }
   ];
 
@@ -129,25 +207,33 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm"
+                className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
-                    <div className="p-3 rounded-full bg-secondary/10">
+                    <div className="p-3 rounded-full bg-secondary/10 group-hover:scale-110 transition-transform duration-300">
                       {service.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-foreground">
+                  <h3 className="text-lg font-bold mb-3 text-foreground text-center">
                     {service.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground mb-4 text-center leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="space-y-2">
+                    {service.details.map((detail, detailIndex) => (
+                      <div key={detailIndex} className="flex items-start space-x-2 text-xs">
+                        <div className="w-1.5 h-1.5 bg-secondary rounded-full mt-1.5 flex-shrink-0"></div>
+                        <span className="text-muted-foreground leading-tight">{detail}</span>
+                      </div>
+                    ))}
+                  </div>
                 </CardContent>
               </Card>
             ))}
