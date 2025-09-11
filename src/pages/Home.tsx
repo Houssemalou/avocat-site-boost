@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, Target, Handshake, ChevronDown } from 'lucide-react';
+import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, Target, Handshake, ChevronDown, Eye, Lock, Rocket } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/cabinet-exterior.jpg';
@@ -405,6 +405,127 @@ const Home = () => {
               <Link to="/contact">
                 <Button className="hero-button">
                   Consulter Notre Équipe
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Juridiques pour Startups */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+              Notre Offre de Services Juridiques pour les Startups
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <span className="font-semibold text-secondary">Cabinet Lakhoua</span> : une offre standardisée de qualité pour accompagner votre croissance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {/* Lisibilité */}
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 border-2 border-secondary/30 rounded-full flex items-center justify-center bg-secondary/5 group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Lisibilité
+                </h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="leading-relaxed">
+                    Des prestations précisément identifiées
+                  </p>
+                  <p className="leading-relaxed">
+                    Des prix affichés sans surcoût
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Protection */}
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group" style={{ animationDelay: '100ms' }}>
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 border-2 border-secondary/30 rounded-full flex items-center justify-center bg-secondary/5 group-hover:scale-110 transition-transform duration-300">
+                    <Lock className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Protection
+                </h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="leading-relaxed">
+                    Une activité respectueuse du secret professionnel et des conflits d'intérêts
+                  </p>
+                  <p className="leading-relaxed">
+                    Une activité garantie par une assurance responsabilité professionnelle
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Réactivité */}
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group" style={{ animationDelay: '200ms' }}>
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 border-2 border-secondary/30 rounded-full flex items-center justify-center bg-secondary/5 group-hover:scale-110 transition-transform duration-300">
+                    <Rocket className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Réactivité
+                </h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="leading-relaxed">
+                    Une réponse sous 24 heures
+                  </p>
+                  <p className="leading-relaxed">
+                    La dématérialisation totale des échanges
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Réseau */}
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-card/50 backdrop-blur-sm group" style={{ animationDelay: '300ms' }}>
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="w-20 h-20 border-2 border-secondary/30 rounded-full flex items-center justify-center bg-secondary/5 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Réseau
+                </h3>
+                <div className="space-y-3 text-sm text-muted-foreground">
+                  <p className="leading-relaxed">
+                    L'accès à un réseau élargi de partenaires
+                  </p>
+                  <p className="leading-relaxed">
+                    L'assurance de bénéficier auprès d'eux de tarifs privilégiés
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-12 fade-in-up">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl max-w-4xl mx-auto border border-white/20">
+              <h3 className="text-2xl font-bold mb-4 hero-text">
+                Accompagnement Startup Personnalisé
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Bénéficiez de notre expertise spécialisée pour startups avec des solutions juridiques adaptées à votre croissance et à vos besoins spécifiques.
+              </p>
+              <Link to="/contact">
+                <Button className="hero-button">
+                  Contactez-nous pour votre Startup
                 </Button>
               </Link>
             </div>
