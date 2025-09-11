@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award } from 'lucide-react';
+import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, Target, Handshake } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/cabinet-exterior.jpg';
@@ -213,6 +213,87 @@ const Home = () => {
                   </Button>
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
+      <section className="py-20 bg-gradient-to-br from-secondary/5 to-primary/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
+              Notre Méthodologie
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Une approche structurée et personnalisée pour garantir la meilleure défense de vos intérêts.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-background/80 backdrop-blur-sm group">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-secondary/20 to-primary/10 group-hover:scale-110 transition-transform duration-300">
+                    <Search className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Étude Approfondie
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Analyse détaillée et minutieuse des besoins spécifiques de chaque client pour une compréhension complète de la situation juridique.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-background/80 backdrop-blur-sm group" style={{ animationDelay: '100ms' }}>
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-secondary/20 to-primary/10 group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Stratégie Personnalisée
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Élaboration d'une stratégie sur mesure pour le règlement des litiges ou le conseil juridique adapté à votre situation.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="elegant-card hover-lift fade-in-up border-0 bg-background/80 backdrop-blur-sm group" style={{ animationDelay: '200ms' }}>
+              <CardContent className="p-8 text-center">
+                <div className="mb-6 flex justify-center">
+                  <div className="p-4 rounded-full bg-gradient-to-br from-secondary/20 to-primary/10 group-hover:scale-110 transition-transform duration-300">
+                    <Handshake className="w-10 h-10 text-secondary" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Approche Dynamique
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Négociations proactives et gestion efficace des conflits pour obtenir les meilleurs résultats dans les délais optimaux.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12 fade-in-up">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl max-w-4xl mx-auto border border-white/20">
+              <h3 className="text-2xl font-bold mb-4 hero-text">
+                Excellence & Rigueur Juridique
+              </h3>
+              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                Notre méthodologie éprouvée, fruit de plus de 50 ans d'expérience, 
+                nous permet d'offrir un service juridique d'exception adapté à chaque situation.
+              </p>
+              <Link to="/contact">
+                <Button className="hero-button">
+                  Consulter Notre Équipe
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
