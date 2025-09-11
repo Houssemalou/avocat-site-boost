@@ -162,6 +162,69 @@ const About = () => {
         </div>
       </section>
 
+      {/* Consultation Gratuite */}
+      <section className="py-20 bg-gradient-to-br from-secondary/5 to-primary/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iYSIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjAyIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-20"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center fade-in-up">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-secondary to-primary rounded-full mb-8 animate-pulse">
+              <UserCheck className="w-10 h-10 text-white" />
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 hero-text bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+              Consultation Gratuite
+            </h2>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+              Bénéficiez d'une première consultation gratuite pour évaluer votre situation juridique 
+              et découvrir les solutions adaptées à vos besoins.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover-lift fade-in-up" style={{ animationDelay: '100ms' }}>
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Scale className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="font-semibold mb-2">Évaluation Professionnelle</h3>
+                <p className="text-sm text-muted-foreground">Analyse approfondie de votre dossier par nos experts</p>
+              </div>
+              
+              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover-lift fade-in-up" style={{ animationDelay: '200ms' }}>
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="font-semibold mb-2">Conseils Personnalisés</h3>
+                <p className="text-sm text-muted-foreground">Solutions sur mesure adaptées à votre situation</p>
+              </div>
+              
+              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover-lift fade-in-up" style={{ animationDelay: '300ms' }}>
+                <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="font-semibold mb-2">Excellence Garantie</h3>
+                <p className="text-sm text-muted-foreground">50+ années d'expertise à votre service</p>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-secondary/10 to-primary/10 p-8 rounded-2xl border border-secondary/20 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center animate-bounce">
+                  <span className="text-2xl font-bold text-white">!</span>
+                </div>
+              </div>
+              <p className="text-lg font-medium text-secondary mb-2">
+                Première consultation entièrement gratuite
+              </p>
+              <p className="text-muted-foreground">
+                Prenez rendez-vous dès aujourd'hui pour discuter de votre situation juridique 
+                sans aucun engagement financier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Expertise */}
       <section className="py-20 bg-muted/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
