@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-yellow-600/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -26,8 +26,8 @@ const Header = () => {
               <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold hero-text">Cabinet Lakhoua</span>
-              <span className="text-sm text-muted-foreground">Avocat & Conseil Juridique</span>
+              <span className="text-xl font-bold text-yellow-600">Cabinet Lakhoua</span>
+              <span className="text-sm text-white/70">Avocat & Conseil Juridique</span>
             </div>
           </Link>
 
@@ -39,13 +39,13 @@ const Header = () => {
                 to={item.path}
                 className={`text-sm font-medium transition-colors duration-200 relative ${
                   isActive(item.path)
-                    ? 'gold-text'
-                    : 'text-foreground hover:text-primary'
+                    ? 'text-yellow-600'
+                    : 'text-white hover:text-yellow-500'
                 }`}
               >
                 {item.label}
                 {isActive(item.path) && (
-                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary to-secondary-light rounded-full" />
+                  <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-600 rounded-full" />
                 )}
               </Link>
             ))}
@@ -53,7 +53,7 @@ const Header = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/contact">
-              <Button className="hero-button">
+              <Button className="bg-yellow-600 hover:bg-yellow-700 text-black font-semibold">
                 Consultation Gratuite
               </Button>
             </Link>
@@ -62,7 +62,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-yellow-600/20 transition-colors text-white"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
@@ -74,7 +74,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 animate-fade-in-up">
+          <div className="md:hidden py-4 border-t border-yellow-600/20 animate-fade-in-up bg-black/90 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <Link
@@ -83,8 +83,8 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-lg font-medium transition-colors duration-200 px-4 py-2 rounded-lg ${
                     isActive(item.path)
-                      ? 'gold-text bg-muted'
-                      : 'text-foreground hover:text-primary hover:bg-muted'
+                      ? 'text-yellow-600 bg-yellow-600/10'
+                      : 'text-white hover:text-yellow-500 hover:bg-yellow-600/10'
                   }`}
                 >
                   {item.label}
@@ -92,7 +92,7 @@ const Header = () => {
               ))}
               <div className="px-4 pt-4">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Button className="hero-button w-full">
+                  <Button className="bg-yellow-600 hover:bg-yellow-700 text-black font-semibold w-full">
                     Consultation Gratuite
                   </Button>
                 </Link>
