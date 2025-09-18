@@ -225,50 +225,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Expertise */}
-      <section className="py-20 bg-muted/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text relative z-10">
-              Domaines d'Expertise
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mb-6 rounded-full"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Une maîtrise approfondie du droit dans ses différentes branches pour vous conseiller efficacement.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {expertise.map((item, index) => (
-              <Card 
-                key={index} 
-                className="elegant-card hover-lift fade-in-up border-0 bg-background"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-8">
-                  <div className="mb-6 flex justify-center">
-                    <div className="p-4 rounded-full bg-secondary/10">
-                      {item.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-center">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 text-center leading-relaxed">
-                    {item.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full">
-                      {item.experience}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Histoire du Cabinet */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
