@@ -17,7 +17,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-yellow-600/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-yellow-600/20 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -40,7 +40,7 @@ const Header = () => {
                 className={`text-sm font-medium transition-colors duration-200 relative ${
                   isActive(item.path)
                     ? 'text-yellow-600'
-                    : 'text-white hover:text-yellow-500'
+                    : 'text-gray-900 hover:text-yellow-600'
                 }`}
               >
                 {item.label}
@@ -62,7 +62,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-yellow-600/20 transition-colors text-white"
+            className="md:hidden p-2 rounded-lg hover:bg-yellow-600/20 transition-colors text-gray-900"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
@@ -74,7 +74,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-yellow-600/20 animate-fade-in-up bg-black/90 backdrop-blur-sm">
+          <div className="md:hidden py-4 border-t border-yellow-600/20 animate-fade-in-up bg-white/90 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               {navigationItems.map((item) => (
                 <Link
@@ -84,7 +84,7 @@ const Header = () => {
                   className={`text-lg font-medium transition-colors duration-200 px-4 py-2 rounded-lg ${
                     isActive(item.path)
                       ? 'text-yellow-600 bg-yellow-600/10'
-                      : 'text-white hover:text-yellow-500 hover:bg-yellow-600/10'
+                      : 'text-gray-900 hover:text-yellow-600 hover:bg-yellow-600/10'
                   }`}
                 >
                   {item.label}
