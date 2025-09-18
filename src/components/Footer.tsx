@@ -16,8 +16,8 @@ const Footer = () => {
             partenaires et/ou employés de ses événements et des actualités du marché, et fournit un espace 
             pour vos analyses sur les tendances, la jurisprudence...
           </p>
-         <form 
-            action="https://formsubmit.co/medhedi.lakhoua@planet.tn" 
+          <form 
+            action="https://formsubmit.co/contact@cabinetlakhoua.tn" 
             method="POST"
             className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
           >
@@ -76,13 +76,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-secondary">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 mt-1 text-secondary flex-shrink-0" />
-                <span className="text-sm text-primary-foreground/80">
-                  Rue saint Fulgence, Mutuelleville, Tunis 1082<br />
-  
-                </span>
-              </div>
+               <div className="flex items-start space-x-3">
+                 <MapPin className="w-5 h-5 mt-1 text-secondary flex-shrink-0" />
+                 <span className="text-sm text-primary-foreground/80">
+                   13, rue docteur Calmette<br />
+                   Mutuelleville, Tunis 1082
+                 </span>
+               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary" />
                 <span className="text-sm text-primary-foreground/80">71 78 39 39</span>
@@ -91,10 +91,14 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-secondary" />
                 <span className="text-sm text-primary-foreground/80">71 78 30 82</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-secondary" />
-                <span className="text-sm text-primary-foreground/80">Medhedi.lakhoua@planet.tn</span>
-              </div>
+               <div className="flex items-center space-x-3">
+                 <Mail className="w-5 h-5 text-secondary" />
+                 <span className="text-sm text-primary-foreground/80">abbes.lakhoua@gmail.com</span>
+               </div>
+               <div className="flex items-center space-x-3">
+                 <Mail className="w-5 h-5 text-secondary" />
+                 <span className="text-sm text-primary-foreground/80">contact@cabinetlakhoua.tn</span>
+               </div>
             </div>
           </div>
 

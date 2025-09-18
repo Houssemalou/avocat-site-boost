@@ -27,7 +27,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold hero-text">Cabinet Lakhoua</span>
-              <span className="text-sm text-muted-foreground">مكتب لخوة للمحاماة</span>
+              <span className="text-sm text-muted-foreground">Avocat & Conseil Juridique</span>
             </div>
           </Link>
 

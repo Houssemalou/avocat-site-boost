@@ -60,7 +60,7 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6 text-secondary" />,
       title: "Adresse",
       details: [
-        "1, Rue saint Fulgence",
+        "13, rue docteur Calmette",
         "Mutuelleville, Tunis 1082"
       ]
     },
@@ -76,8 +76,8 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6 text-secondary" />,
       title: "Email",
       details: [
-        "Medhedi.lakhoua@planet.tn"
-       
+        "abbes.lakhoua@gmail.com",
+        "contact@cabinetlakhoua.tn"
       ]
     },
     {
@@ -135,7 +135,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="p-6">
                   <form 
-                    action="https://formsubmit.co/medhedi.lakhoua@planet.tn" 
+                    action="https://formsubmit.co/contact@cabinetlakhoua.tn" 
                     method="POST"
                     onSubmit={handleSubmit} 
                     className="space-y-6"

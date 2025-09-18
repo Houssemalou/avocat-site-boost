@@ -6,6 +6,9 @@ import { Scale, Users, FileText, Shield, Star, Quote, BookOpen, Award, Search, T
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import heroImage from '@/assets/cabinet-exterior.jpg';
+import officeProfessional from '@/assets/office-professional.jpg';
+import meetingRoom from '@/assets/meeting-room.jpg';
+import receptionArea from '@/assets/reception-area.jpg';
 
 const Home = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -138,23 +141,7 @@ const Home = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Société CIC Banque",
-      role: "Institution financière",
-      content: "Un partenariat de confiance avec le Cabinet Lakhoua pour nos opérations juridiques complexes."
-    },
-    {
-      name: "Groupe MAZARS",
-      role: "Cabinet d'audit",
-      content: "Excellence juridique et approche professionnelle remarquable dans nos dossiers internationaux."
-    },
-    {
-      name: "TRANSAVIA International",
-      role: "Entreprise internationale",
-      content: "Accompagnement juridique de premier plan pour nos activités en Tunisie et à l'international."
-    }
-  ];
+  const testimonials = [];
 
   return (
     <>
@@ -175,11 +162,11 @@ const Home = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Maître <span className="gold-text">Lakhoua</span> Mohamed Hédi
+              Maître <span className="gold-text">Abbes Lakhoua</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Avocat auprès de la Cour de Cassation - Docteur en Droit<br/>
-              Fondé en 1973, plus de 50 ans d'excellence juridique au service de vos droits.
+              Avocat - Expert en Droit des Affaires<br/>
+              Cabinet moderne et expertise juridique de nouvelle génération.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
@@ -533,92 +520,85 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Notre Cabinet - Photos */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
-              Témoignages Clients
+              Découvrez Notre Cabinet
             </h2>
             <p className="text-lg text-muted-foreground">
-              La satisfaction de nos clients est notre plus belle récompense.
+              Un environnement professionnel moderne au cœur de Tunis.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card 
-                key={index} 
-                className="elegant-card hover-lift fade-in-up border-0"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <CardContent className="p-6">
-                  <Quote className="w-8 h-8 text-secondary mb-4" />
-                  <p className="text-muted-foreground mb-4 italic leading-relaxed">
-                    "{testimonial.content}"
-                  </p>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center">
-                      <span className="text-secondary font-semibold">
-                        {testimonial.name.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <div className="font-semibold">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 hero-text">
-              Découvrez Notre Expertise
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Une présentation vidéo de notre cabinet et de nos services juridiques d'excellence.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto fade-in-up">
-            <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm border border-white/20">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/watch?v=v_EvZfDgKoc"
-                title="Présentation du Cabinet Lakhoua"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            
-            <div className="text-center mt-8">
-              <p className="text-muted-foreground mb-4">
-                Découvrez l'histoire et l'expertise de notre cabinet à travers cette présentation exclusive.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact">
-                  <Button className="hero-button">
-                    Prendre Rendez-vous
-                  </Button>
-                </Link>
-                <Link to="/about">
-                  <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-white">
-                    En Savoir Plus
-                  </Button>
-                </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="elegant-card hover-lift fade-in-up border-0 overflow-hidden group">
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={officeProfessional} 
+                  alt="Bureau professionnel du cabinet" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
-            </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Bureau Principal</h3>
+                <p className="text-muted-foreground text-sm">
+                  Un espace de travail moderne et élégant pour nos consultations privées.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="elegant-card hover-lift fade-in-up border-0 overflow-hidden group" style={{ animationDelay: '100ms' }}>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={meetingRoom} 
+                  alt="Salle de réunion du cabinet" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Salle de Réunion</h3>
+                <p className="text-muted-foreground text-sm">
+                  Un espace dédié aux négociations et réunions avec nos clients.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="elegant-card hover-lift fade-in-up border-0 overflow-hidden group" style={{ animationDelay: '200ms' }}>
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={receptionArea} 
+                  alt="Espace d'accueil du cabinet" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </div>
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-2">Espace d'Accueil</h3>
+                <p className="text-muted-foreground text-sm">
+                  Un accueil chaleureux dans un cadre professionnel et moderne.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12 fade-in-up">
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              Notre cabinet situé au cœur de Mutuelleville, Tunis, vous accueille dans un environnement 
+              professionnel moderne équipé des dernières technologies pour vous offrir le meilleur service juridique.
+            </p>
+            <Link to="/contact">
+              <Button className="hero-button">
+                Visitez Notre Cabinet
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
+
 
       {/* Publications Section */}
       <section className="py-20 bg-gradient-to-br from-muted/30 to-secondary/5">
@@ -628,7 +608,7 @@ const Home = () => {
               Publications Académiques
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Contributions scientifiques et pédagogiques de Maître Mohamed Hédi Lakhoua à la formation juridique.
+              Contributions scientifiques et expertise juridique de Maître Abbes Lakhoua.
             </p>
           </div>
 
@@ -716,7 +696,7 @@ const Home = () => {
           <div className="text-center mt-12 fade-in-up">
             <Link to="/about">
               <Button className="hero-button">
-                Découvrir Plus Sur Maître Lakhoua
+                Découvrir Plus Sur Maître Abbes Lakhoua
               </Button>
             </Link>
           </div>
