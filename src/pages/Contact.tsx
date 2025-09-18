@@ -116,8 +116,6 @@ const Contact = () => {
           <Map 
             isBackground={true}
             height="h-full"
-            center={[10.1815, 36.8065]}
-            zoom={11}
           />
         </div>
         
@@ -287,8 +285,6 @@ const Contact = () => {
               <Card className="elegant-card border-0 overflow-hidden">
                 <Map 
                   height="h-96"
-                  center={[10.1815, 36.8065]}
-                  zoom={15}
                 />
               </Card>
             </div>

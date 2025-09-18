@@ -1,130 +1,64 @@
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { MapPin } from 'lucide-react';
+import React from 'react';
+import { MapPin, ExternalLink } from 'lucide-react';
 
 interface MapProps {
   isBackground?: boolean;
   height?: string;
-  center?: [number, number];
-  zoom?: number;
 }
 
 const Map: React.FC<MapProps> = ({ 
   isBackground = false, 
-  height = "h-96", 
-  center = [10.1815, 36.8065], // Tunis, Tunisia coordinates
-  zoom = 12 
+  height = "h-96"
 }) => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [accessToken, setAccessToken] = useState<string>('');
-  const [isTokenSet, setIsTokenSet] = useState(false);
+  // Cabinet Lakhoua location coordinates
+  const latitude = 36.8065;
+  const longitude = 10.1815;
+  const address = "13, rue docteur Calmette, Mutuelleville, Tunis 1082";
 
-  const handleTokenSubmit = () => {
-    if (accessToken.trim()) {
-      setIsTokenSet(true);
-      initializeMap();
-    }
+  const handleMapClick = () => {
+    // Open Google Maps with the location
+    const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+    window.open(googleMapsUrl, '_blank');
   };
 
-  const initializeMap = () => {
-    if (!mapContainer.current || !accessToken) return;
-
-    try {
-      // Initialize map
-      mapboxgl.accessToken = accessToken;
+  return (
+    <div 
+      className={`${height} bg-gradient-to-br from-yellow-600/20 via-black/80 to-yellow-800/20 relative rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-all duration-300 group`}
+      onClick={handleMapClick}
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/30"></div>
       
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/light-v11',
-        zoom: zoom,
-        center: center,
-        interactive: !isBackground,
-      });
-
-      // Add marker for the law firm location
-      new mapboxgl.Marker({ color: '#B8860B' }) // Gold color matching the theme
-        .setLngLat(center)
-        .setPopup(
-          new mapboxgl.Popup({ offset: 25 })
-            .setHTML('<h3>Cabinet Lakhoua</h3><p>1, Rue saint Fulgence<br>Mutuelleville, Tunis 1082</p>')
-        )
-        .addTo(map.current);
-
-      // Add navigation controls if not background
-      if (!isBackground) {
-        map.current.addControl(
-          new mapboxgl.NavigationControl({
-            visualizePitch: true,
-          }),
-          'top-right'
-        );
-      }
-
-      // Disable scroll zoom for background maps
-      if (isBackground) {
-        map.current.scrollZoom.disable();
-        map.current.doubleClickZoom.disable();
-        map.current.dragPan.disable();
-      }
-
-    } catch (error) {
-      console.error('Erreur lors de l\'initialisation de la carte:', error);
-    }
-  };
-
-  useEffect(() => {
-    return () => {
-      map.current?.remove();
-    };
-  }, []);
-
-  if (!isTokenSet) {
-    return (
-      <div className={`${height} bg-gradient-to-br from-primary/10 to-secondary/10 relative rounded-lg overflow-hidden`}>
-        <div className="absolute inset-0 flex items-center justify-center p-8">
-          <div className="text-center max-w-md">
-            <MapPin className="w-16 h-16 text-secondary mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-4">Configuration de la carte</h3>
-            <p className="text-muted-foreground mb-6 text-sm">
-              Pour afficher la carte interactive, veuillez saisir votre token Mapbox public. 
-              Vous pouvez l'obtenir sur <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline">mapbox.com</a>
-            </p>
-            <div className="space-y-4">
-              <Input
-                type="text"
-                placeholder="Entrez votre token Mapbox public..."
-                value={accessToken}
-                onChange={(e) => setAccessToken(e.target.value)}
-                className="text-sm"
-              />
-              <Button 
-                onClick={handleTokenSubmit}
-                className="hero-button w-full"
-                disabled={!accessToken.trim()}
-              >
-                Charger la carte
-              </Button>
+      <div className="absolute inset-0 flex items-center justify-center p-8">
+        <div className="text-center text-white">
+          <div className="mb-6 flex justify-center">
+            <div className="p-4 rounded-full bg-yellow-600/20 group-hover:bg-yellow-600/30 transition-colors duration-300 group-hover:scale-110 transform">
+              <MapPin className="w-12 h-12 text-yellow-600" />
             </div>
-            <div className="mt-4 text-xs text-muted-foreground">
-              <p><strong>1, Rue saint Fulgence</strong></p>
-              <p>Mutuelleville, Tunis 1082</p>
-            </div>
+          </div>
+          
+          <h3 className="text-2xl font-bold mb-4 text-white">
+            Cabinet Lakhoua
+          </h3>
+          
+          <p className="text-white/90 mb-4 leading-relaxed">
+            {address}
+          </p>
+          
+          <div className="flex items-center justify-center space-x-2 text-yellow-600 group-hover:text-yellow-500 transition-colors">
+            <ExternalLink className="w-5 h-5" />
+            <span className="font-semibold">Voir sur Google Maps</span>
+          </div>
+          
+          <div className="mt-4 text-sm text-white/70">
+            Cliquez pour ouvrir dans Google Maps
           </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div className={`relative ${height} w-full`}>
-      <div ref={mapContainer} className="absolute inset-0 rounded-lg shadow-lg" />
-      {isBackground && (
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-background/30 rounded-lg" />
-      )}
+      
+      {/* Decorative elements */}
+      <div className="absolute top-4 left-4 w-2 h-2 bg-yellow-600 rounded-full opacity-60"></div>
+      <div className="absolute top-8 right-8 w-1 h-1 bg-yellow-600 rounded-full opacity-40"></div>
+      <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-yellow-600 rounded-full opacity-50"></div>
     </div>
   );
 };

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Scale, Send, Instagram, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import logo from '@/assets/logo.png';
 
 const Footer = () => {
   return (
@@ -52,12 +51,9 @@ const Footer = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Logo & Description */}
+          {/* Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-8 h-8">
-                <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain brightness-0 invert drop-shadow-sm" />
-              </div>
+            <div className="mb-4">
               <span className="text-xl font-bold text-white">Cabinet Lakhoua</span>
             </div>
             <p className="text-white/80 mb-4 max-w-md">
