@@ -91,12 +91,12 @@ const About = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in-up">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 hero-text">
-              Cabinet Lakhoua - مكتب لخوة للمحاماة
+              Cabinet Lakhoua
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Fondé en 1973 par Maître Mohamed Hédi Lakhoua, composé d'une dizaine de personnes, 
-              le Cabinet a développé un partenariat étroit avec des entreprises nationales et internationales de premier ordre. 
-              Fier d'une notoriété juridique pluridisciplinaire qui dure depuis plus de 50 ans.
+              Cabinet d'avocat moderne dirigé par Maître Abbes Lakhoua, spécialisé dans le conseil juridique 
+              et l'accompagnement des entreprises. Une approche contemporaine du droit pour répondre aux défis 
+              d'aujourd'hui avec expertise et professionnalisme.
             </p>
           </div>
         </div>
