@@ -121,7 +121,7 @@ const About = () => {
             
             <div className="fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 hero-text">
-                Maître Lakhoua Mohamed Hédi
+                Maître Lakhoua Abbes
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                 Avocat auprès de la Cour de Cassation avec 45 ans d'expérience, Docteur en Droit, 
@@ -236,7 +236,7 @@ const About = () => {
               <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mb-8 rounded-full"></div>
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Fondé en 1973 par Maître Mohamed Hédi Lakhoua, le cabinet d'avocats a toujours pratiqué 
+                  Fondé en 1973 par Maître Abbes Lakhoua, le cabinet d'avocats a toujours pratiqué 
                   une activité judiciaire en tant que plaideur en plus de fournir des services de conseil.
                 </p>
                 
@@ -317,7 +317,7 @@ const About = () => {
             </h2>
             <div className="w-20 h-1 bg-gradient-to-r from-secondary to-primary mx-auto mb-6 rounded-full"></div>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Contributions académiques et scientifiques de Maître Mohamed Hédi Lakhoua.
+              Contributions académiques et scientifiques de Maître Abbes Lakhoua.
             </p>
           </div>
 
