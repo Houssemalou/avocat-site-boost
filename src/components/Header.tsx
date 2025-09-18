@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Scale } from 'lucide-react';
-import logo from '@/assets/logo-lakhoua.png';
+import logo from '@/assets/logo-cabinet.jpg';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,13 +21,13 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover-lift">
-            <div className="w-10 h-10 relative">
-              <img src={logo} alt="Cabinet d'Avocat" className="w-full h-full object-contain drop-shadow-sm" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-yellow-600">Cabinet Lakhoua</span>
-              <span className="text-sm text-white/70">Avocat & Conseil Juridique</span>
+          <Link to="/" className="hover-lift">
+            <div className="w-12 h-12 relative">
+              <img 
+                src={logo} 
+                alt="Cabinet Lakhoua" 
+                className="w-full h-full object-cover rounded-full drop-shadow-lg border-2 border-yellow-600/30" 
+              />
             </div>
           </Link>
 
