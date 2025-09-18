@@ -152,17 +152,20 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(33, 58, 138, 0.8), rgba(33, 58, 138, 0.6)), url(${heroImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed'
           }}
         />
         
+        {/* Yellow accent overlay */}
+        <div className="absolute inset-0 z-5 bg-gradient-to-br from-yellow-600/20 via-transparent to-yellow-800/10"></div>
+        
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Maître <span className="gold-text">Abbes Lakhoua</span>
+              Maître <span className="text-yellow-600">Abbes Lakhoua</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto">
               Avocat - Expert en Droit des Affaires<br/>
@@ -170,12 +173,12 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
-                <Button className="hero-button text-lg px-10 py-6">
+                <Button className="bg-yellow-600 hover:bg-yellow-700 text-black font-semibold text-lg px-10 py-6">
                   Consultation Gratuite
                 </Button>
               </Link>
               <Link to="/about">
-                <Button className="outline-button text-lg px-10 py-6 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                <Button className="bg-white/10 border-2 border-yellow-600 text-white hover:bg-yellow-600 hover:text-black text-lg px-10 py-6 backdrop-blur-sm transition-colors">
                   Découvrir le Cabinet
                 </Button>
               </Link>
@@ -184,8 +187,8 @@ const Home = () => {
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 border-yellow-600/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-yellow-600/70 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
