@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="hover-lift">
-            <div className="w-12 h-12 relative">
+            <div className="w-16 h-16 relative">
               <img 
                 src={logo} 
                 alt="Cabinet Lakhoua" 
