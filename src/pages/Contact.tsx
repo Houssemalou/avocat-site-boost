@@ -250,7 +250,7 @@ const Contact = () => {
               {/* Emergency Contact */}
               <Card className="elegant-card border-2 border-secondary/20 bg-gradient-to-br from-secondary/5 to-secondary/10">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold mb-3 gold-text">
+                  <h3 className="text-lg font-semibold mb-3 blue-text">
                     Urgences 24h/24
                   </h3>
                   <p className="text-muted-foreground mb-4">
