@@ -6,35 +6,35 @@
 
 @layer base {
   :root {
-    /* Core Colors - Professional Law Firm Palette */
-    --background: 0 0% 100%;
-    --foreground: 222 44% 12%;
+    /* Core Colors - Dark Yellow, Black & White Palette */
+    --background: 0 0% 100%;         /* White */
+    --foreground: 0 0% 0%;           /* Black */
     
     /* Law Firm Brand Colors */
-    --primary: 214 100% 50%;        /* Bright Blue */
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 214 85% 65%;   /* Lighter Blue */
+    --primary: 45 100% 35%;          /* Dark Yellow */
+    --primary-foreground: 0 0% 100%; /* White on dark yellow */
+    --primary-light: 45 90% 50%;     /* Lighter Yellow */
     
-    --secondary: 45 95% 50%;        /* Gold Accent */
-    --secondary-foreground: 222 44% 12%;
-    --secondary-light: 45 80% 60%;  /* Light Gold */
+    --secondary: 45 100% 25%;        /* Darker Yellow */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-light: 45 90% 40%;   /* Medium Yellow */
     
     /* Supporting Colors */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 45 20% 95%;            /* Very Light Yellow-tinted */
+    --muted-foreground: 0 0% 40%;   /* Dark Gray */
     
-    --accent: 45 95% 50%;           /* Gold */
-    --accent-foreground: 222 44% 12%;
+    --accent: 45 100% 30%;          /* Dark Yellow Accent */
+    --accent-foreground: 0 0% 100%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 222 44% 12%;
+    --card: 0 0% 100%;              /* White */
+    --card-foreground: 0 0% 0%;     /* Black */
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 44% 12%;
+    --popover: 0 0% 100%;           /* White */
+    --popover-foreground: 0 0% 0%;  /* Black */
     
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 214 100% 50%;
+    --border: 45 20% 85%;           /* Light Yellow-Gray */
+    --input: 45 20% 90%;            /* Very Light Yellow */
+    --ring: 45 100% 35%;            /* Dark Yellow */
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
@@ -42,69 +42,69 @@
     --radius: 0.75rem;
     
     /* Law Firm Specific Variables */
-    --hero-gradient: linear-gradient(135deg, hsl(214 100% 50%) 0%, hsl(214 85% 65%) 100%);
-    --gold-gradient: linear-gradient(135deg, hsl(45 95% 50%) 0%, hsl(45 80% 60%) 100%);
-    --elegant-shadow: 0 10px 40px -12px hsl(214 100% 50% / 0.25);
-    --card-shadow: 0 4px 20px -4px hsl(214 100% 50% / 0.1);
-    --glow-effect: 0 0 30px hsl(45 95% 50% / 0.3);
+    --hero-gradient: linear-gradient(135deg, hsl(45 100% 35%) 0%, hsl(45 90% 50%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(45 100% 25%) 0%, hsl(45 90% 40%) 100%);
+    --elegant-shadow: 0 10px 40px -12px hsl(45 100% 35% / 0.25);
+    --card-shadow: 0 4px 20px -4px hsl(45 100% 35% / 0.1);
+    --glow-effect: 0 0 30px hsl(45 100% 35% / 0.3);
     
     /* Sidebar Variables */
-    --sidebar-background: 214 100% 50%;
+    --sidebar-background: 45 100% 35%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 45 95% 50%;
-    --sidebar-primary-foreground: 222 44% 12%;
-    --sidebar-accent: 214 85% 65%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 214 85% 65%;
-    --sidebar-ring: 45 95% 50%;
+    --sidebar-primary: 45 100% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 90% 50%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 45 90% 50%;
+    --sidebar-ring: 45 100% 25%;
   }
 
   .dark {
-    --background: 222 44% 12%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 8%;           /* Very Dark (Almost Black) */
+    --foreground: 0 0% 100%;         /* White */
     
-    --primary: 45 95% 50%;           /* Gold becomes primary in dark */
-    --primary-foreground: 222 44% 12%;
-    --primary-light: 45 80% 60%;
+    --primary: 45 100% 50%;          /* Bright Yellow in dark mode */
+    --primary-foreground: 0 0% 0%;   /* Black on yellow */
+    --primary-light: 45 90% 60%;
     
-    --secondary: 221 70% 35%;        /* Lighter navy becomes secondary */
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 221 60% 45%;
+    --secondary: 45 100% 40%;        /* Medium Yellow */
+    --secondary-foreground: 0 0% 0%; /* Black on yellow */
+    --secondary-light: 45 80% 55%;
     
-    --muted: 221 70% 25%;
-    --muted-foreground: 220 13% 70%;
+    --muted: 0 0% 15%;              /* Dark Gray */
+    --muted-foreground: 0 0% 70%;   /* Light Gray */
     
-    --accent: 45 95% 50%;
-    --accent-foreground: 222 44% 12%;
+    --accent: 45 100% 45%;
+    --accent-foreground: 0 0% 0%;
     
-    --card: 221 70% 18%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 12%;               /* Very Dark Gray */
+    --card-foreground: 0 0% 100%;   /* White */
     
-    --popover: 221 70% 18%;
+    --popover: 0 0% 12%;
     --popover-foreground: 0 0% 100%;
     
-    --border: 221 70% 30%;
-    --input: 221 70% 30%;
-    --ring: 45 95% 50%;
+    --border: 0 0% 25%;             /* Dark Gray Border */
+    --input: 0 0% 20%;              /* Dark Input */
+    --ring: 45 100% 50%;            /* Bright Yellow */
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     
     /* Dark Mode Specific Variables */
-    --hero-gradient: linear-gradient(135deg, hsl(221 70% 25%) 0%, hsl(221 60% 35%) 100%);
-    --gold-gradient: linear-gradient(135deg, hsl(45 95% 50%) 0%, hsl(45 80% 60%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 12%) 0%, hsl(0 0% 20%) 100%);
+    --gold-gradient: linear-gradient(135deg, hsl(45 100% 50%) 0%, hsl(45 90% 60%) 100%);
     --elegant-shadow: 0 10px 40px -12px hsl(0 0% 0% / 0.5);
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
-    --glow-effect: 0 0 30px hsl(45 95% 50% / 0.4);
+    --glow-effect: 0 0 30px hsl(45 100% 50% / 0.4);
     
-    --sidebar-background: 221 70% 15%;
+    --sidebar-background: 0 0% 10%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 45 95% 50%;
-    --sidebar-primary-foreground: 222 44% 12%;
-    --sidebar-accent: 221 70% 25%;
+    --sidebar-primary: 45 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 221 70% 25%;
-    --sidebar-ring: 45 95% 50%;
+    --sidebar-border: 0 0% 25%;
+    --sidebar-ring: 45 100% 50%;
   }
 }
 
